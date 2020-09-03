@@ -2,10 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import bcrypt from 'bcrypt';
 import knex from 'knex';
-import handleSignin from './controllers/signin.js';
-import handleRegister from './controllers/register.js';
-import handleProfileGet from './controllers/profile.js';
-import {handleApiCall, handleImage} from './controllers/image.js';
+import handleSignin from './controllers/signin.mjs';
+import handleRegister from './controllers/register.mjs';
+import handleProfileGet from './controllers/profile.mjs';
+import {handleApiCall, handleImage} from './controllers/image.mjs';
 
 const app = express();
 const PORT = 3001 || process.env.PORT;
