@@ -8,7 +8,7 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
 const app = express();
-const PORT = 3001 || process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
@@ -31,5 +31,5 @@ app.put('/image', image.handleImage(db));
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) });
 
 app.listen(PORT, () => {
-	console.log(`App is running on port: ${PORT} http://localhost:${PORT}`);
+	console.log(`App is running on port: ${PORT}`);
 });
