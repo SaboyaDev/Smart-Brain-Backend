@@ -31,5 +31,7 @@ app.put('/image', image.handleImage(db));
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) });
 
 app.listen(PORT, () => {
-	console.log(`App is running on port: ${PORT}`);
+	console.log(
+		`App is running on port: ${PORT} or see it live at https://young-mesa-35370.herokuapp.com/`
+	);
 });
